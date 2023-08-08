@@ -2,13 +2,7 @@
 
 <h1>New task</h1>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :Title %>
-  <%= f.text_field :title, class: "form-control mt-3"%>
-  <%= f.label :Details %>
-  <%= f.text_field :details, class: "form-control mt-3"%>
-  <%= f.submit class: "btn btn-primary mt-3"%>
-<% end %>
+<%= render "form", task: @task %>
 
 <%= link_to "Back to lists", tasks_path %>
 
